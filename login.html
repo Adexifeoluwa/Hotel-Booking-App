@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./login.css">
+    <title>Login Page</title>
+
+</head>
+<body id="main">
+    <h2><span>ELiz </span>Hilton Hotel</h2>
+
+    <div class="container" id="container">
+        <div class="form-container sign-up-container">
+            <form action="#">
+                <h1>Create an Account</h1>
+                <div class="social-container">
+                    <a href="#">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+
+                </div>
+                <span>Use your emai to register</span>
+                <input id="email" type="email" placeholder="Email" required/>
+                <input id="password" type="password" placeholder="Password" required/>
+                <br>
+                <button onclick="createAccount()">Sign Up</button>
+
+            </form>
+
+        </div>
+
+        <div class="form-container sign-in-container" >
+            <form action="./Booking_homepage.html" >
+                <h1>Sign In</h1>
+                <div class="social-container">
+                    <a href="#">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+
+                </div>
+                <span>Login to your account</span>                
+                <input id="email2" type="email" placeholder="Email" required/>
+                <span id="email-error" style="visibility: hidden;" >Please Sign In with Valid Email</span>
+                <input id="password2" type="password" placeholder="Password" required/>
+                <img onclick="showPassword()" id="eye-icon" src="./image/bg/eye.svg" alt="">
+                <!-- <p  id="eye-icon" style="height: 0px; margin: 0; margin-left: 0%; padding-left: 160px;"><img src="./image/bg/eye.svg" alt=""></p> -->
+                <br>
+                <a href="#">Forget your password?</a>
+                <button onclick="validateEmail()">Sign In</button>
+   
+
+            </form>
+
+        </div>
+
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left" >
+                    <h1>Already Have Account</h1>
+                    <p>To keep connect with us please login with your account here!</p>
+                    <button class="ghost" id="signIn">Sign In</button>
+                </div>
+
+                <div class="overlay-panel overlay-right">
+                    <h1>Create Your Account</h1>
+                    <p>Enter your personal detail and start journey with us</p>
+                    <button class="ghost" id="signUp">Sign Up</button>
+                </div>
+
+            </div>
+
+        </div>
+         
+    </div>
+<!--   
+    <div>
+        <form action="/homepage.html">
+        <h2>Login</h2>
+        <div input-group>
+            <input type="text" name="loginUser" id="email" required />
+            <label for="loginUser">Email Address</label>
+        </div>
+        <br>
+        <div input-group>
+            <input type="password" name="loginPassword" id="loginPassword" required />
+            <label for="loginPassword">Password</label>
+        </div>
+        
+        <input type="submit" value="Login" class="submit-btn" onclick="auth()" />
+        </form>
+    </div> -->
+
+    <script>
+        function auth () {
+            var email = document.querySelector("#email").value;
+            var password = document.querySelector("#password").value;
+
+            if (email == "adexifeoluwa44@gmail.com" && password == "admin123"){
+                alert("Login Successfully")
+                window.location.assign("homepage.html");
+            }
+            else {
+                alert("Invalid Information")
+                return;
+            }
+        }
+    </script>
+
+
+<script>
+    function createAccount () {
+        var email = document.querySelector("#email").value;
+        var password = document.querySelector("#password").value;
+
+        if (email !== "" && password !== ""){
+                alert("Account Successfully")
+                window.location.assign("homepage.html");
+            }
+
+    }
+</script>
+
+
+
+    
+    <script src="./login.js"></script>
+</body>
+</html>
